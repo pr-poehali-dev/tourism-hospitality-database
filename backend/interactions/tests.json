@@ -1,0 +1,21 @@
+{
+  "tests": [
+    {
+      "name": "Get reviews",
+      "method": "GET",
+      "path": "/?resource=reviews",
+      "expectedStatus": 200,
+      "expectedBody": [],
+      "bodyMatcher": "partial"
+    },
+    {
+      "name": "Send contact",
+      "method": "POST",
+      "path": "/?resource=contact",
+      "body": {"name": "Тест", "email": "t@t.com", "message": "Тест"},
+      "expectedStatus": 200,
+      "expectedBody": {"success": true},
+      "bodyMatcher": "partial"
+    }
+  ]
+}

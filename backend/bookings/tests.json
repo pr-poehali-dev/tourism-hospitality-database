@@ -1,0 +1,22 @@
+{
+  "tests": [
+    {
+      "name": "Create booking",
+      "method": "POST",
+      "path": "/",
+      "body": {
+        "client_name": "Тест Пользователь",
+        "client_email": "test@example.com",
+        "client_phone": "+7 999 000 00 00",
+        "tour_id": 1,
+        "check_in_date": "2026-07-01",
+        "check_out_date": "2026-07-08",
+        "total_amount": 45000,
+        "currency_code": "RUB"
+      },
+      "expectedStatus": 201,
+      "expectedBody": {"status": "confirmed"},
+      "bodyMatcher": "partial"
+    }
+  ]
+}
